@@ -2,6 +2,33 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+
+st.set_page_config(page_title="PhonePe Data Dashboard", layout="wide")
+
+st.title("📊 PhonePe Data Analytics Dashboard")
+st.write("Analyzing digital payment trends across India 💜")
+
+# Upload CSV (optional)
+uploaded_file = st.file_uploader("Upload your dataset (CSV)", type=["csv"])
+if uploaded_file:
+    df = pd.read_csv(uploaded_file)
+    st.write("Preview of data:")
+    st.dataframe(df.head())
+
+    # Sample map visualization
+    if 'State' in df.columns and 'Transaction_amount' in df.columns:
+        fig = px.choropleth(
+            df,
+            geojson="https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json",
+            locations="State",
+            color="Transaction_amount",
+            title="State-wise Transaction Analysis"
+        )
+        st.plotly_chart(fig)
+else:
+    st.info("👆 Upload a dataset to see visualizations")
+
+
 st.set_page_config(page_title="PhonePe Data Dashboard", layout="wide")
 
 st.title("📊 PhonePe Data Analytics Dashboard")
@@ -22,5 +49,6 @@ fig = px.choropleth(
 fig.update_geos(fitbounds="locations", visible=False)
 
 st.plotly_chart(fig)
+
 
 
