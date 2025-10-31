@@ -21,5 +21,6 @@ fig = px.choropleth(
 
 fig.update_geos(fitbounds="locations", visible=False)
 
-fig.show()
+st.plotly_chart(fig)
+
 
