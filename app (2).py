@@ -36,10 +36,28 @@ fig = px.choropleth(
     color='active cases',
     color_continuous_scale='Viridis'
 )
+fig.update_traces(
+    text=df['state'],
+    textposition='middle center'
+)
+
+# Adjust layout for better appearance
+fig.update_geos(
+    fitbounds="locations",
+    visible=False
+)
+
+fig.update_layout(
+    title_text='Active COVID-19 Cases Across Indian States',
+    title_x=0.5,
+    font=dict(size=14),
+    geo=dict(showframe=False, showcoastlines=False)
+)
 
 fig.update_geos(fitbounds="locations", visible=False)
 
 st.plotly_chart(fig)
+
 
 
 
