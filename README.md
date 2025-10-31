@@ -2,8 +2,8 @@
 Interactive dashboard to explore PhonePe transactions, user engagement, and insurance insights across India using Streamlit.
 # 💳 PhonePe Pulse Data Visualization and Analysis Dashboard
 
-## 🚀 Live Dashboard  
-👉 [Click here to view the Streamlit App](https://your-streamlit-link.streamlit.app)
+##  Live Dashboard  
+👉 [Click Here - https://phonepay--pulse-s7hsuaek2srv7wkh7hpgsq.streamlit.app/#phone-pe-data-analytics-dashboard]
 
 ---
 
