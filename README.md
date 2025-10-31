@@ -12,8 +12,7 @@ This project analyzes and visualizes data from the **PhonePe Pulse dataset**, ex
 It includes insights into transaction trends, user engagement, insurance, and regional performance (state & district levels).  
 
 The project leverages:
-- **Python** for data processing  
-- **SQL** for data querying and organization  
+- **Python** for data processing   
 - **Plotly & Streamlit** for interactive visualizations  
 - **ETL (Extract, Transform, Load)** concepts for data flow   
 
