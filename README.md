@@ -34,7 +34,6 @@ It combines analytical thinking with technical implementation to bridge business
 
 ## **Technical Stack**
 - **Python**
-- **SQL**
 - **Streamlit**
 - **Plotly**
 - **Pandas**
